@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76556646-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-76556646-1');
+</script>
+	<meta http-equiv="cache-control" content="no-cache"/>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Felipe Goni"/>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	<!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Oswald" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+	<link rel="stylesheet" href="css/colors.css" type="text/css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="css/responsive.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<![endif]-->
+
+	<!-- External JavaScripts
+	============================================= -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+
+	<!-- Document Title
+	============================================= -->
+	<title>Garza Surfboards</title>
+
+</head>
+
+<body class="stretched dark">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class=" full-header" data-sticky-class="not-dark">
+
+			<div id="header-wrap">
+
+				<div class="container clearfix">
+
+					<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo">
+						<a href="index.html" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo"></a>
+						<a href="index.html" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo"></a>
+					</div><!-- #logo end -->
+
+					<!-- Primary Navigation
+					============================================= -->
+					<nav id="primary-menu">
+
+						<ul>
+							<li class="current"><a href="index.html"><div>Home</div></a></li>
+							<li><a href="surfboards.html"><div>Surfboards</div></a></li>
+							<li><a href="softboards.html"><div>Softboards</div></a></li>
+							<li><a href="historia.html"><div>Historia</div></a></li>
+							<li><a href="contacto.html"><div>Contacto</div></a></li>
+						</ul>
+
+					</nav><!-- #primary-menu end -->
+
+				</div>
+
+			</div>
+
+		</header><!-- #header end -->
+
+		<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+
+			<div class="swiper-container swiper-parent">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide dark" style="background-image: url('images/slider/slider1.jpg');">
+						<div class="container clearfix">
+							<div class="slider-caption slider-caption-center">
+								<h2 data-caption-animate="fadeInUp">GARZA SURFBOARDS</h2>
+								<p data-caption-animate="fadeInUp" data-caption-delay="200">Fabricando tablas desde 1979</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				jQuery(document).ready(function($){
+					var swiperSlider = new Swiper('.swiper-parent',{
+						paginationClickable: false,
+						slidesPerView: 1,
+						grabCursor: false,
+						loop: false,
+						onSwiperCreated: function(swiper){
+							$('[data-caption-animate]').each(function(){
+								var $toAnimateElement = $(this);
+								var toAnimateDelay = $(this).attr('data-caption-delay');
+								var toAnimateDelayTime = 0;
+								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 750; } else { toAnimateDelayTime = 750; }
+								if( !$toAnimateElement.hasClass('animated') ) {
+									$toAnimateElement.addClass('not-animated');
+									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+									setTimeout(function() {
+										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+									}, toAnimateDelayTime);
+								}
+							});
+							SEMICOLON.slider.swiperSliderMenu();
+						},
+						onSlideChangeStart: function(swiper){
+							$('[data-caption-animate]').each(function(){
+								var $toAnimateElement = $(this);
+								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
+							});
+							SEMICOLON.slider.swiperSliderMenu();
+						},
+						onSlideChangeEnd: function(swiper){
+							$('#slider').find('.swiper-slide').each(function(){
+								if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
+								if($(this).find('.yt-bg-player').length > 0) { $(this).find('.yt-bg-player').pauseYTP(); }
+							});
+							$('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function(){
+								if($(this).find('video').length > 0) {
+									if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
+								}
+								if($(this).find('.yt-bg-player').length > 0) {
+									$(this).find('.yt-bg-player').getPlayer().seekTo( $(this).find('.yt-bg-player').attr('data-start') );
+								}
+							});
+							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play(); }
+							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').playYTP(); }
+
+							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
+								var $toAnimateElement = $(this);
+								var toAnimateDelay = $(this).attr('data-caption-delay');
+								var toAnimateDelayTime = 0;
+								if( toAnimateDelay ) { toAnimateDelayTime = Number( toAnimateDelay ) + 300; } else { toAnimateDelayTime = 300; }
+								if( !$toAnimateElement.hasClass('animated') ) {
+									$toAnimateElement.addClass('not-animated');
+									var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+									setTimeout(function() {
+										$toAnimateElement.removeClass('not-animated').addClass( elementAnimation + ' animated');
+									}, toAnimateDelayTime);
+								}
+							});
+						}
+					});
+
+					$('#slider-arrow-left').on('click', function(e){
+						e.preventDefault();
+						swiperSlider.swipePrev();
+					});
+
+					$('#slider-arrow-right').on('click', function(e){
+						e.preventDefault();
+						swiperSlider.swipeNext();
+					});
+				});
+			</script>
+
+			<a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap" style="padding-bottom: 0">
+
+				<div class="container clearfix">
+					<div class="row clearfix">
+
+						<div class="col-lg-5">
+							<div class="heading-block topmargin">
+								<h1>¿Quiénes Somos?</h1>
+							</div>
+							<p class="lead">Somos Garza Surfboards, una marca creada por Garza, uno de los mejores shapers del pais. Nos dedicamos a proveer tablas de excelente calidad para cualquier tipo de surfista.</p>
+						</div>
+
+						<div class="col-lg-7">
+
+							<div style="position: relative; margin-bottom: -60px;" class="ohidden" data-height-lg="426" data-height-md="567" data-height-sm="470" data-height-xs="287" data-height-xxs="183">
+								<img src="images/services/main-fbrowser.png" style="border-radius: 10px; position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="100" alt="Chrome">
+								<!--<img src="images/services/main-fmobile.png" style="position: absolute; top: 0; left: 0;" data-animate="fadeInUp" data-delay="400" alt="iPad">-->
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section nobottommargin">
+					<div class="container clear-bottommargin clearfix">
+
+						<div class="row topmargin-sm clearfix">
+
+							<div class="col-md-4 bottommargin">
+								<img src="images/icons/surfbico.png" style="max-width: 10%; margin-bottom: 15px;">
+								<div class="heading-block nobottomborder" style="margin-bottom: 15px;">
+									<h4>Surfboards</h4>
+								</div>
+								<p>Desde un shortboard hasta un longboard, todas nuestras tablas de fibra están shapeadas por Garza. Fabricadas en foam eps o en epoxy, son ideales para cualquier persona, ya sea que este aprendiendo o sea un surfista avanzado que quiere seguir mejorando su nivel.</p>
+							</div>
+
+							<div class="col-md-4 bottommargin">
+								<img src="images/icons/longico.png" style="max-width: 10%; margin-bottom: 15px;max-height: 91px;">
+								<div class="heading-block nobottomborder" style="margin-bottom: 15px;">
+									<h4>Softboards</h4>
+								</div>
+								<p>Buscamos crear un softboard diferente al resto. Nuestra línea de softboards es shapeada a mano, posee un alma de aluminio, el material con el cual esta construido no absorbe agua, es 100% reciclable y no tiene memoria. Es la tabla ideal para aprender en cualquier ola.</p>
+							</div>
+
+							<div class="col-md-4 bottommargin">
+								<img src="images/icons/supico.png" style="max-width: 10%; margin-bottom: 15px;max-height: 91px;">
+								<div class="heading-block nobottomborder" style="margin-bottom: 15px;">
+									<h4>Stand Up Paddle</h4>
+								</div>
+								<p>Tenemos las únicas tablas de Stand Up Paddle (S.U.P.) 100% nacionales. Shapeadas a mano por Garza, es la tabla idea para los días que esta chico y querés divertirte. A su vez, es la solución ideal para el que quiere entrenar en lagos, piletas, etc en Capital o en lugares sin olas.</p>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="container clearfix">
+
+					<div class="row topmargin-lg bottommargin-sm">
+
+						<div class="heading-block center">
+							<h2>¿POR QUÉ NUESTRAS TABLAS?</h2>
+						</div>
+
+						<div class="col-md-4 col-sm-6 bottommargin" style="margin-top: 50px;">
+
+							<div class="feature-box fbox-right topmargin" data-animate="fadeIn">
+								<div class="fbox-icon">
+									<i class="icon-line-check"></i>
+								</div>
+								<h3>100% ARTESANALES</h3>
+								<p>Nuestras tablas son todas 100% shapeadas a mano por Garza.</p>
+							</div>
+
+							<div class="feature-box fbox-right topmargin" data-animate="fadeIn" data-delay="200">
+								<div class="fbox-icon">
+									<i class="icon-line-check"></i>
+								</div>
+								<h3>EPOXY &amp FOAM</h3>
+								<p>Podés elegir el material de tu tabla, ya quieras epoxy o foam.</p>
+							</div>
+
+							<div class="feature-box fbox-right topmargin" data-animate="fadeIn" data-delay="400">
+								<div class="fbox-icon">
+									<i class="icon-line-check"></i>
+								</div>
+								<h3>VARIEDAD</h3>
+								<p>Elegí el tipo de tabla que vos quieras, nosotros la fabricamos.</p>
+							</div>
+
+						</div>
+
+						<div class="col-md-4 hidden-sm bottommargin center" >
+							<img src="images/services/iphone7.png" alt="iphone 2" style="max-height: 550px;">
+						</div>
+
+						<div class="col-md-4 col-sm-6 bottommargin" style="margin-top: 50px;">
+
+							<div class="feature-box topmargin" data-animate="fadeIn">
+								<div class="fbox-icon">
+									<i class="icon-line-check"></i>
+								</div>
+								<h3>100% PERSONALIZABLES</h3>
+								<p>Desde el tamaño y tipo de tabla, hasta la pintura, podés elegir todo vos.</p>
+							</div>
+
+							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="200">
+								<div class="fbox-icon">
+									<i class="icon-line-check"></i>
+								</div>
+								<h3>PERSONAL</h3>
+								<p>Te damos la posibilidad de que vos mismo pintes tu propia tabla y le des un toque propio.</p>
+							</div>
+
+							<div class="feature-box topmargin" data-animate="fadeIn" data-delay="400">
+								<div class="fbox-icon">
+									<i class="icon-line-check"></i>
+								</div>
+								<h3>RESISTENCIA</h3>
+								<p>Nuestras tablas son resistentes para que las puedas usar en todo tipo de ola.</p>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="clear"></div>
+
+				<a class="button button-full button-dark center tright">
+					<div class="container clearfix">
+						¿Necesitas reparar tu tabla? ¡Llamanos o mandanos un Whatsapp al 1131027448!
+					</div>
+				</a>
+
+
+				<div class="section parallax dark nobottommargin" style="margin-top:0 ;background-image: url('images/services/home-testi-bg.jpg'); padding: 100px 0;" data-stellar-background-ratio="0.4">
+
+					<div class="heading-block center">
+						<h3>Que dicen nuestros clientes?</h3>
+					</div>
+
+					<div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false">
+						<div class="flexslider">
+							<div class="slider-wrap">
+								<div class="slide">
+									<div class="testi-content">
+										<p>Hace 10 años que probé por primera vez una tabla hecha por Garza, y desde entonces siempre confié en su experiencia cada vez que necesite una tabla y siempre seguí corriendo con tablas hechas por el. Por muchas tablas mas!!!! Abrazo!</p>
+										<div class="testi-meta">
+											Juan Pablo Jaunarena
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="testi-content">
+										<p>Tengo 2 tablas Garza. Una gun y una pod. Se aguantaron con holgura la potencia del mar de Mentawaii, Sumatra, Indonesia, y de Costa Rica. Las mejores tablas que tuve.
+											Gracias Garza por tantas alegrías!</p>
+											<div class="testi-meta">
+												Alejandro Gancedo
+											</div>
+										</div>
+									</div>
+									<div class="slide">
+										<div class="testi-content">
+											<p>La mejor inversión junto con un amigo fue comprar las tablas al Garza, hechas a medida un huevo 6.6 y un de 7.3, disfrutándolas por tercer año consecutivo! Ahorrando para encarar la segunda. No pierdan la oportunidad de tener una que los una con el mar. Abrazo !</p>
+											<div class="testi-meta">
+												Manuel
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+
+					<div class="section" style="margin-top: 0 !important; margin-bottom: 0 ; padding-bottom:0 ; padding-top: 0 !important;">
+						<div class="container clearfix">
+
+							<div class="row topmargin-sm">
+
+								<div class="heading-block center">
+									<h3>#TEAMGARZA</h3>
+								</div>
+
+								<div class="col-md-3 col-sm-6 bottommargin">
+
+									<div class="team">
+										<div class="team-image">
+											<img src="images/team/garza.jpg" alt="John Doe">
+										</div>
+										<div class="team-desc team-desc-bg">
+											<div class="team-title"><h4>Garza</h4></div>
+											<a href="tel:+5491131027448" class="social-icon inline-block si-small si-light si-rounded si-rss">
+												<i class="icon-call"></i>
+												<i class="icon-call"></i>
+											</a>
+											<a href="https://www.facebook.com/garzasurf" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/garzasurfboards/" class="social-icon inline-block si-small si-light si-rounded si-instagram">
+												<i class="icon-instagram"></i>
+												<i class="icon-instagram"></i>
+											</a>
+											<a href="mailto:garzasurf25@yahoo.com.ar" class="social-icon inline-block si-small si-light si-rounded si-email3">
+												<i class="icon-email3"></i>
+												<i class="icon-email3"></i>
+											</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="col-md-3 col-sm-6 bottommargin">
+
+									<div class="team">
+										<div class="team-image">
+											<img src="images/team/juan.jpg" alt="Josh Clark">
+										</div>
+										<div class="team-desc team-desc-bg">
+											<div class="team-title"><h4>Juan Goñi</h4></div>
+											<a href="tel:+5491161191444" class="social-icon inline-block si-small si-light si-rounded si-rss">
+												<i class="icon-call"></i>
+												<i class="icon-call"></i>
+											</a>
+											<a href="https://www.facebook.com/profile.php?id=746436006" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/juanigoni/" class="social-icon inline-block si-small si-light si-rounded si-instagram">
+												<i class="icon-instagram"></i>
+												<i class="icon-instagram"></i>
+											</a>
+											<a href="mailto:juan_goni_21@hotmail.com" class="social-icon inline-block si-small si-light si-rounded si-email3">
+												<i class="icon-email3"></i>
+												<i class="icon-email3"></i>
+											</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="col-md-3 col-sm-6 bottommargin">
+
+									<div class="team">
+										<div class="team-image">
+											<img src="images/team/feli.jpg" alt="Mary Jane">
+										</div>
+										<div class="team-desc team-desc-bg">
+											<div class="team-title"><h4>Felipe Goñi</h4></div>
+											<a href="tel:+5491149805830" class="social-icon inline-block si-small si-light si-rounded si-rss">
+												<i class="icon-call"></i>
+												<i class="icon-call"></i>
+											</a>
+											<a href="https://www.facebook.com/feli.goni" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+											<a href="https://www.instagram.com/feligoni/" class="social-icon inline-block si-small si-light si-rounded si-instagram">
+												<i class="icon-instagram"></i>
+												<i class="icon-instagram"></i>
+											</a>
+											<a href="mailto:felipe.gonicaruso@gmail.com" class="social-icon inline-block si-small si-light si-rounded si-email3">
+												<i class="icon-email3"></i>
+												<i class="icon-email3"></i>
+											</a>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="col-md-3 col-sm-6 bottommargin">
+
+									<div class="team">
+										<div class="team-image">
+											<img src="images/team/gabo.jpg" alt="Nix Maxwell">
+										</div>
+										<div class="team-desc team-desc-bg">
+											<div class="team-title"><h4>Gabo Rosales</h4></div>
+											<a href="tel:+5491149805830" class="social-icon inline-block si-small si-light si-rounded si-rss">
+												<i class="icon-call"></i>
+												<i class="icon-call"></i>
+											</a>
+											<a href="https://www.facebook.com/gabo.rosales.1" class="social-icon inline-block si-small si-light si-rounded si-facebook">
+												<i class="icon-facebook"></i>
+												<i class="icon-facebook"></i>
+											</a>
+
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap clearfix">
+
+
+						<div class="col_one_third">
+
+							<div class="widget clearfix">
+
+								<img src="images/logo-dark-widget.png" alt="" class="footer-logo">
+
+								<div style="background: url('images/world-map.png') no-repeat center center; background-size: 100%;">
+									<address>
+										<strong>Taller:</strong><br>
+										Tamborini 5638<br>
+										Villa Urquiza, Capital Federal<br>
+									</address>
+									<abbr><strong>Garza:</strong></abbr> (549) 11 3102 7448<br>
+									<abbr><strong>Felipe:</strong></abbr> (549) 11 4980 5830<br>
+									<abbr><strong>Juan:</strong></abbr> (549) 11 6119 1444<br>
+									<abbr><strong>Email:</strong></abbr> info@garzasoftboards.com
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="col_one_third">
+
+							<div class="widget widget_links clearfix" style="margin-top:60px; margin-left:0;">
+
+								<h4>Sitio</h4>
+
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="surfboards.html">Surfboards</a></li>
+									<li><a href="softboards.html">Softboards</a></li>
+									<li><a href="historia.html">Historia</a></li>
+									<li><a href="contacto.html">Contacto</a></li>
+									<li><a href="http://tienda.garzasurfboards.com">Tienda</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col_one_third col_last" style="margin-top:70px;">
+
+						<div class="widget quick-contact-widget clearfix">
+
+				
+							<div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+							<form id="quick-contact-form" name="quick-contact-form" action="include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
+
+								<div class="form-process"></div>
+
+								<div class="input-group divcenter">
+									<span class="input-group-addon"><i class="icon-user"></i></span>
+									<input type="text" class="required form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Nombre..." />
+								</div>
+								<div class="input-group divcenter">
+									<span class="input-group-addon"><i class="icon-email2"></i></span>
+									<input type="text" class="required form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Email..." />
+								</div>
+								<textarea class="required form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Mensaje..."></textarea>
+								<input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+								<button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="button button-3d nomargin" value="submit">Enviar</button>
+
+							</form>
+
+							<script type="text/javascript">
+
+								$("#quick-contact-form").validate({
+									submitHandler: function(form) {
+										$(form).animate({ opacity: 0.4 });
+										$(form).find('.form-process').fadeIn();
+										$(form).ajaxSubmit({
+											target: '#quick-contact-form-result',
+											success: function() {
+												$(form).animate({ opacity: 1 });
+												$(form).find('.form-process').fadeOut();
+												$(form).find('.form-control').val('');
+												$('#quick-contact-form-result').attr('data-notify-msg', $('#quick-contact-form-result').html()).html('');
+												SEMICOLON.widget.notifications($('#quick-contact-form-result'));
+											}
+										});
+									}
+								});
+
+							</script>
+
+						</div>
+
+					</div>
+
+					</div>
+
+					<!--<div class="col_one_third col_last">
+
+						<div class="widget clearfix" style="margin-bottom: -20px;">
+
+							<div class="row">
+
+								<div class="col-md-6 bottommargin-sm">
+									<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+									<h5 class="nobottommargin">Total Downloads</h5>
+								</div>
+
+								<div class="col-md-6 bottommargin-sm">
+									<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<h5 class="nobottommargin">Clients</h5>
+								</div>
+
+							</div>
+
+						</div>
+
+						<div class="widget subscribe-widget clearfix">
+							<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+							<div id="widget-subscribe-form-result" data-notify-type="success" data-notify-msg=""></div>
+							<form id="widget-subscribe-form" action="include/subscribe.php" role="form" method="post" class="nobottommargin">
+								<div class="input-group divcenter">
+									<span class="input-group-addon"><i class="icon-email2"></i></span>
+									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+									<span class="input-group-btn">
+										<button class="btn btn-success" type="submit">Subscribe</button>
+									</span>
+								</div>
+							</form>
+							<script type="text/javascript">
+								jQuery("#widget-subscribe-form").validate({
+									submitHandler: function(form) {
+										jQuery(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
+										jQuery(form).ajaxSubmit({
+											target: '#widget-subscribe-form-result',
+											success: function() {
+												jQuery(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
+												jQuery('#widget-subscribe-form').find('.form-control').val('');
+												jQuery('#widget-subscribe-form-result').attr('data-notify-msg', jQuery('#widget-subscribe-form-result').html()).html('');
+												SEMICOLON.widget.notifications(jQuery('#widget-subscribe-form-result'));
+											}
+										});
+									}
+								});
+							</script>
+						</div>
+
+						<div class="widget clearfix" style="margin-bottom: -20px;">
+
+							<div class="row">
+
+								<div class="col-md-6 clearfix bottommargin-sm">
+									<a href="#" class="social-icon si-dark si-colored si-facebook nobottommargin" style="margin-right: 10px;">
+										<i class="icon-facebook"></i>
+										<i class="icon-facebook"></i>
+									</a>
+									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Like us</strong><br>on Facebook</small></a>
+								</div>
+								<div class="col-md-6 clearfix">
+									<a href="#" class="social-icon si-dark si-colored si-rss nobottommargin" style="margin-right: 10px;">
+										<i class="icon-rss"></i>
+										<i class="icon-rss"></i>
+									</a>
+									<a href="#"><small style="display: block; margin-top: 3px;"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>-->
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+		</footer><!-- #footer end -->
+		<footer id="mobile-footer" class="dark">
+			<div class="container">
+
+                <!-- Footer Widgets
+                ============================================= -->
+                <div class="footer-widgets-wrap clearfix">
+
+                	<div class="col_two_third">
+
+                		<div class="col_one_third">
+
+                			<div class="widget clearfix">
+                				<div class="mobile-footer">
+                					<img src="http://garzasurfboards.com/wp-content/uploads/2017/04/logo.png" style="width: 200px;margin-bottom: 40px;"></br>
+                					<div style="margin-top: 15px;" class="iconfoot" >
+                						<a href="tel:+5491161191444" target="_blank">
+                							<i class="fa fa-phone fa-2x" aria-hidden="true"style="color: white"></i>
+                						</a>
+                						<a href="mailto:info@garzasurfboards.com" target="_top">
+                							<i class="fa fa-envelope-o fa-2x" aria-hidden="true" style="color: white"></i>
+                						</a>
+                						<a href="https://www.facebook.com/garzasurfargentina/" target="_blank">
+                							<i class="fa fa-facebook fa-2x" aria-hidden="true" style="color: white"></i>
+                						</a>
+                						<a href="https://www.instagram.com/garzasurfboards/" target="_blank">
+                							<i class="fa fa-instagram fa-2x" aria-hidden="true"style="color: white"></i>
+                						</a>
+                					</div>
+
+                				</div>
+                			</div>
+                		</div>
+                	</div>
+                </div>
+            </div>
+        </footer>
+
+    </div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-angle-up"></div>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script type="text/javascript" src="js/functions.js"></script>
+
+</body>
+</html>
